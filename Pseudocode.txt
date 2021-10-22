@@ -1,0 +1,73 @@
+Question - 4 : Write a program that calculates the count of words and spaces present in the file.
+
+Pseudocode:
+
+Make a function def counter(one argument):
+	Initialize the variable num_words = 0
+	Initialize the variable num_charc = 0
+	Initialize the variable num_spaces = 0
+	
+	Make a list and store all the special character ch = ["*", "@", "#", "$", "%", "&", ".", "?", ",", "<", ">", ";", ":", "/", "|", "[", "]", "{", "}", "=", "+", "_",
+          "-", "(", ")", "^", "!", "`", "~"]
+
+	with open(fname, 'r') as f:
+		Perform a loop for all the line present in f:
+			Concatenate the string split_var = line.split(' ')
+			Convert all the string presents in list to lower case low_list = [each_string.lower() for each_string in split_var]
+			Convert the list to set
+			Perform if-else statement if (len of list != len of set):
+				num_dup= (len(low_list) - len(set_list)) + 1
+			else:
+				num_dup =0
+
+			word = "Y"
+			
+			Perform a loop for all the letter present in line:
+				if (letter != ' ' and word == 'Y'):
+					Initialize the variable num_words and increment by 1
+					 word = 'N'
+				elif (letter == ' '):
+					Initialize the variable num_spaces and increment by 1
+				word = 'Y'
+				Perform a loop for i in letter:
+					if i in ch:
+						Initialize the variable num_charc and increment by 1
+		print num_words for count the all words
+            	print num_dup for count the all duplicate words
+            	print num_charc for count the all special character
+            	print num_spaces for count the all spaces
+
+if __name__ == '__main__':
+	Retrieve the path of the file from the user into variable fname
+	Perform a try block to handles the exceptions:
+        	counter(fname)
+    	except:
+        	print File not found
+
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
