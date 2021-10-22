@@ -18,5 +18,5 @@ def arr(lis):
     print(resultlist)
 
 if __name__ == '__main__':
-    lis=[1, 11, 3, 0, 15, 5, 2, 4, 10, 7, 12, 6]
+    lis=[13,33,44, 11, 3, 0, 15, 5, 2]
     arr(lis)
